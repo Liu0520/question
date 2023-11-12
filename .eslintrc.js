@@ -28,6 +28,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react'],
   rules: {
-    '@typescript-eslint/no-var-requires': 'off'
+    '@typescript-eslint/no-var-requires': 'off',
+    'react/display-name': 'off'
   }
 }
