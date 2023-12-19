@@ -1,0 +1,34 @@
+.container {
+  // height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  background-color: #222;
+  // .left {
+  //   float: left;
+  // }
+
+  // .right {
+  //   float: right;
+  // }
+}
+
+.main {
+  min-height: calc(100vh - 64px - 68px);
+}
+
+.footer {
+  box-sizing: border-box;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-top: 1px solid #e8e8e8;
+}

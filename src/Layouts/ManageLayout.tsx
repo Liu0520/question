@@ -1,17 +1,21 @@
-import React, { memo, FC } from 'react'
-import { Outlet } from 'react-router-dom'
 import styles from './ManageLayout.module.scss'
 
+import React, { memo, FC, useEffect } from 'react'
+import { Outlet, useNavigate, useLocation } from 'react-router-dom'
+import LeftMenu from '@/components/LeftMenu'
+
 const ManageLayout: FC = memo(() => {
+  const nav = useNavigate()
+  const { pathname } = useLocation()
+  useEffect(() => {
+    if (pathname === '/manage') {
+      nav('/manage/list')
+    }
+  }, [pathname])
+
   return (
     <div className={styles.container}>
-      <div className={styles.left}>
-        <p>ManageLAyout Left</p>
-        <a href="">创建问卷</a>
-        <a href="">我的问卷</a>
-        <a href="">星标问卷</a>
-        <a href="">回收站</a>
-      </div>
+      <LeftMenu />
       <div className={styles.right}>
         <Outlet />
       </div>

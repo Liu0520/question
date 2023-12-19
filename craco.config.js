@@ -7,5 +7,10 @@ module.exports = {
     alias: {
       '@': resolve('src')
     }
+  },
+  devServer: {
+    proxy: {
+      '/api': 'http://localhost:3001'
+    }
   }
 }

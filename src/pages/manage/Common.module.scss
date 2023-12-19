@@ -1,0 +1,41 @@
+.container {
+  // overflow-y: auto;
+  // height: calc(100vh - 152px);
+  &::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+    -ms-overflow-style: none; /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+.header {
+  display: flex;
+  margin-bottom: 5px;
+  height: 40px;
+  .left {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+  }
+}
+
+.content {
+  margin-bottom: 5px;
+}
+
+.footer {
+  text-align: center;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
